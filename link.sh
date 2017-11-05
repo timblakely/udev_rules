@@ -18,5 +18,6 @@ for rule in ./*.rules; do
   ln -s $(pwd)/$rule $dest
 done
 
+echo "Triggering udev reload"
 udevadm control --reload-rules
 udevadm trigger
